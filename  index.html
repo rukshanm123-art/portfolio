@@ -1,0 +1,599 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Rukshan De Silva — Tech Portfolio" />
+  <title>Rukshan De Silva | Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <canvas id="bg" aria-hidden="true"></canvas>
+
+  <div class="scroll-progress" aria-hidden="true">
+    <div class="scroll-progress__bar" id="scrollBar"></div>
+  </div>
+
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav-wrap">
+    <div class="nav container">
+      <a class="logo" href="#top" aria-label="Go to top">
+        <span class="logo__mark">RD</span>
+        <span class="logo__text">Rukshan</span>
+      </a>
+
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#about" data-nav>About</a>
+        <a href="#experience" data-nav>Experience</a>
+        <a href="#case-studies" data-nav>Case Studies</a>
+        <a href="#projects" data-nav>Projects</a>
+        <a href="#terminal" data-nav>Terminal</a>
+        <a href="#skills" data-nav>Skills</a>
+        <a href="#contact" data-nav>Contact</a>
+      </nav>
+
+      <div class="nav__actions">
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle theme">
+          <span id="themeIcon" aria-hidden="true">⚡</span>
+        </button>
+
+        <a class="btn btn--primary" href="assets/Rukshan_De_Silva_CV.pdf" download>
+          Download CV
+        </a>
+
+        <button class="burger icon-btn" id="openDrawer" type="button" aria-label="Open menu">
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="drawer" id="drawer" aria-hidden="true">
+    <div class="drawer__panel" role="dialog" aria-modal="true" aria-label="Menu">
+      <div class="drawer__top">
+        <div class="drawer__title">Navigation</div>
+        <button class="icon-btn" id="closeDrawer" type="button" aria-label="Close menu">✕</button>
+      </div>
+
+      <div class="drawer__links">
+        <a href="#about" data-drawer>About</a>
+        <a href="#experience" data-drawer>Experience</a>
+        <a href="#case-studies" data-drawer>Case Studies</a>
+        <a href="#projects" data-drawer>Projects</a>
+        <a href="#terminal" data-drawer>Terminal</a>
+        <a href="#skills" data-drawer>Skills</a>
+        <a href="#contact" data-drawer>Contact</a>
+      </div>
+
+      <div class="drawer__cta">
+        <a class="btn btn--primary btn--full" href="assets/Rukshan_De_Silva_CV.pdf" download>Download CV</a>
+        <button class="btn btn--ghost btn--full" id="drawerTheme" type="button">Toggle Theme</button>
+      </div>
+    </div>
+  </div>
+
+  <main id="main">
+    <!-- HERO -->
+    <section id="top" class="section hero">
+      <div class="container hero__grid">
+        <div class="hero__left">
+          <div class="badge" data-reveal>
+            <span class="badge__dot"></span>
+            <span>IT Support • End User Services • Software Engineering Student</span>
+          </div>
+
+          <h1 class="hero__title" data-reveal>
+            Building <span class="grad">reliable support</span> and
+            <span class="grad2">clean software</span>.
+          </h1>
+
+          <p class="hero__sub" data-reveal>
+            I’m <b>Rukshan De Silva</b> — I troubleshoot end-user issues, improve workflows, and build modern web projects.
+            I care about speed, clarity, and user experience.
+          </p>
+
+          <div class="hero__cta" data-reveal>
+            <a class="btn btn--primary" href="#projects">Explore Projects</a>
+            <a class="btn btn--ghost" href="#contact">Contact</a>
+          </div>
+
+          <div class="stats" data-reveal>
+            <div class="stat">
+              <div class="stat__top">Focus</div>
+              <div class="stat__bottom">Service Desk • IT Ops • UI Projects</div>
+            </div>
+            <div class="stat">
+              <div class="stat__top">Style</div>
+              <div class="stat__bottom">Fast troubleshooting + clear communication</div>
+            </div>
+            <div class="stat">
+              <div class="stat__top">Now</div>
+              <div class="stat__bottom">Master’s in Software Engineering (Auckland)</div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero__right" data-reveal>
+          <div class="card card--glow">
+            <div class="card__top">
+              <div class="pfp" aria-hidden="true">RD</div>
+              <div>
+                <div class="card__name">Rukshan De Silva</div>
+                <div class="card__role">IT Support • Software Engineering</div>
+              </div>
+            </div>
+
+            <div class="card__rows">
+              <div class="row">
+                <div class="row__k">Location</div>
+                <div class="row__v">Auckland, NZ</div>
+              </div>
+              <div class="row">
+                <div class="row__k">Specialty</div>
+                <div class="row__v">End User Services</div>
+              </div>
+              <div class="row">
+                <div class="row__k">GitHub</div>
+                <div class="row__v">
+                  <a href="https://github.com/rukshanm123-art" target="_blank" rel="noopener noreferrer">rukshanm123-art</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="card__actions">
+              <a class="btn btn--primary btn--full" href="assets/Rukshan_De_Silva_CV.pdf" download>Download CV</a>
+              <a class="btn btn--ghost btn--full" href="case-studies/airwayai.html">View AirwayAI</a>
+            </div>
+          </div>
+
+          <div class="mini-note">
+            Tip: upload a profile photo and I’ll replace the “RD” badge with it.
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="sec-head" data-reveal>
+          <h2>About</h2>
+          <p>
+            Hands-on IT support with a software engineering mindset. I like structured troubleshooting,
+            crisp documentation, and modern UI that feels premium and fast.
+          </p>
+        </div>
+
+        <div class="grid grid--2">
+          <div class="panel" data-reveal>
+            <h3>What I’m good at</h3>
+            <ul class="bullets">
+              <li>Diagnosing issues quickly and communicating clearly</li>
+              <li>Incident/request handling with clean prioritization</li>
+              <li>Documentation that reduces repeat tickets</li>
+              <li>Building web apps and dashboards with modern UI</li>
+            </ul>
+          </div>
+
+          <div class="panel" data-reveal>
+            <h3>Highlights</h3>
+            <div class="chips">
+              <span class="chip">Service Desk</span>
+              <span class="chip">End User Support</span>
+              <span class="chip">VDI (experience)</span>
+              <span class="chip">UI / Frontend</span>
+              <span class="chip">Debugging</span>
+              <span class="chip">Documentation</span>
+            </div>
+
+            <div class="callout">
+              <div class="callout__title">Quick pitch</div>
+              <div class="callout__text">
+                I combine “support speed” with “engineering thinking” — fix fast, explain clearly, improve the system.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="sec-head" data-reveal>
+          <h2>Experience</h2>
+          <p>Roles that shaped my problem-solving, customer focus, and operational discipline.</p>
+        </div>
+
+        <div class="timeline">
+          <div class="t-item panel" data-reveal>
+            <div class="t-dot" aria-hidden="true"></div>
+            <div class="t-content">
+              <div class="t-top">
+                <div>
+                  <div class="t-title">Associate Engineer — End User Services</div>
+                  <div class="t-sub">Wiley Global Technology • Aug 2024 – Nov 2025</div>
+                </div>
+                <div class="t-tags">
+                  <span class="tag">IT Support</span>
+                  <span class="tag">ITSM</span>
+                  <span class="tag">End User</span>
+                </div>
+              </div>
+
+              <ul class="bullets bullets--tight">
+                <li>Handled incidents/requests and kept communication clear under pressure</li>
+                <li>Improved ticket quality through documentation and consistent resolution notes</li>
+                <li>Supported common access + endpoint troubleshooting workflows</li>
+              </ul>
+
+              <div class="inline-cta">
+                <a class="btn btn--primary" href="#case-studies">Read the case study</a>
+                <a class="btn btn--ghost" href="case-studies/wiley.html">Open case study page</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="t-item panel" data-reveal>
+            <div class="t-dot" aria-hidden="true"></div>
+            <div class="t-content">
+              <div class="t-top">
+                <div>
+                  <div class="t-title">Business Development Associate</div>
+                  <div class="t-sub">HSBC Bank • Sep 2021 – Sep 2023</div>
+                </div>
+                <div class="t-tags">
+                  <span class="tag">Customer Service</span>
+                  <span class="tag">Communication</span>
+                </div>
+              </div>
+              <ul class="bullets bullets--tight">
+                <li>Customer-focused service in a fast-paced environment</li>
+                <li>Built strong communication and service mindset</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CASE STUDIES -->
+    <section id="case-studies" class="section">
+      <div class="container">
+        <div class="sec-head" data-reveal>
+          <h2>Case Studies</h2>
+          <p>Problem → Action → Result. This is the section recruiters actually remember.</p>
+        </div>
+
+        <div class="projects">
+          <a class="project panel" data-reveal href="case-studies/wiley.html">
+            <div class="project__top">
+              <div class="project__title">Wiley End User Services — Case Study</div>
+              <div class="project__pill">Case Study</div>
+            </div>
+            <div class="project__text">
+              A structured write-up showing troubleshooting approach + workflow improvement.
+            </div>
+            <div class="project__foot">
+              <span class="mini">Open page</span>
+              <span class="arrow" aria-hidden="true">↗</span>
+            </div>
+          </a>
+
+          <a class="project panel" data-reveal href="case-studies/airwayai.html">
+            <div class="project__top">
+              <div class="project__title">AirwayAI — AI Lung Cancer Detection</div>
+              <div class="project__pill">BSc</div>
+            </div>
+            <div class="project__text">
+              Flagship BSc final project: CNN model + web app integration for CT scan analysis.
+            </div>
+            <div class="project__foot">
+              <span class="mini">Open page</span>
+              <span class="arrow" aria-hidden="true">↗</span>
+            </div>
+          </a>
+
+          <button class="project panel" data-reveal data-project
+            data-title="Add More Case Studies"
+            data-desc="Tell me 2 real examples from Wiley (no secrets). I’ll convert them into professional case studies with measurable results."
+            data-stack="Template"
+            data-links='[]'>
+            <div class="project__top">
+              <div class="project__title">Next: 2 More Wins</div>
+              <div class="project__pill">Template</div>
+            </div>
+            <div class="project__text">
+              Example: “Login issue spike” or “Repeat ticket reduction” — I’ll format it perfectly.
+            </div>
+            <div class="project__foot">
+              <span class="mini">Click for details</span>
+              <span class="arrow" aria-hidden="true">↗</span>
+            </div>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="sec-head" data-reveal>
+          <h2>Projects</h2>
+          <p>Selected work. Click a project for details.</p>
+        </div>
+
+        <div class="projects">
+          <!-- AirwayAI: Dedicated page -->
+          <a class="project panel" data-reveal href="case-studies/airwayai.html">
+            <div class="project__top">
+              <div class="project__title">AirwayAI — Lung Cancer Detection</div>
+              <div class="project__pill">Flagship</div>
+            </div>
+            <div class="project__text">
+              BSc final project: CNN-based detection + web application + report generation.
+            </div>
+            <div class="project__foot">
+              <span class="mini">Open case study</span>
+              <span class="arrow" aria-hidden="true">↗</span>
+            </div>
+          </a>
+
+          <!-- GitHub project: modal -->
+          <button class="project panel" data-reveal data-project
+            data-title="MSE800 Car Rental System"
+            data-desc="Course project implementing a car rental system. Add your main features (booking, admin, payment, DB) and I’ll upgrade this into a full case study."
+            data-stack="(Update stack) e.g., React • Node • MySQL"
+            data-links='[
+              {"label":"GitHub Repo","url":"https://github.com/rukshanm123-art/mse800-car-rental-system"},
+              {"label":"Readme","url":"https://github.com/rukshanm123-art/mse800-car-rental-system#readme"}
+            ]'>
+            <div class="project__top">
+              <div class="project__title">Car Rental System</div>
+              <div class="project__pill">GitHub</div>
+            </div>
+            <div class="project__text">
+              Repository with source code and documentation.
+            </div>
+            <div class="project__foot">
+              <span class="mini">Click for details</span>
+              <span class="arrow" aria-hidden="true">↗</span>
+            </div>
+          </button>
+
+          <button class="project panel" data-reveal data-project
+            data-title="Dashboard / UI Work"
+            data-desc="If you have any dashboard UI screenshots, send them and I’ll create a professional gallery + write-up."
+            data-stack="React • UI • Charts"
+            data-links='[]'>
+            <div class="project__top">
+              <div class="project__title">UI Dashboards</div>
+              <div class="project__pill">UI</div>
+            </div>
+            <div class="project__text">
+              Clean UI, layouts, responsive components, theming.
+            </div>
+            <div class="project__foot">
+              <span class="mini">Click for details</span>
+              <span class="arrow" aria-hidden="true">↗</span>
+            </div>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- TERMINAL -->
+    <section id="terminal" class="section">
+      <div class="container">
+        <div class="sec-head" data-reveal>
+          <h2>Interactive Terminal</h2>
+          <p>Type commands like <b>help</b>, <b>projects</b>, <b>skills</b>, <b>contact</b>, <b>case</b>, <b>airwayai</b>.</p>
+        </div>
+
+        <div class="terminal panel" data-reveal>
+          <div class="terminal__top">
+            <div class="terminal__dots" aria-hidden="true">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <div class="terminal__title">rukshan@portfolio:~</div>
+            <div class="terminal__hint">Try: <span class="kbd">help</span></div>
+          </div>
+
+          <div class="terminal__body" id="termBody" aria-live="polite"></div>
+
+          <form class="terminal__input" id="termForm" autocomplete="off">
+            <span class="prompt" aria-hidden="true">$</span>
+            <input id="termInput" type="text" spellcheck="false" placeholder="Type a command..." aria-label="Terminal command input"/>
+            <button class="btn btn--ghost" type="submit">Run</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="sec-head" data-reveal>
+          <h2>Skills</h2>
+          <p>Balanced between support operations and building software.</p>
+        </div>
+
+        <div class="grid grid--2">
+          <div class="panel" data-reveal>
+            <h3>Support & Ops</h3>
+
+            <div class="bar">
+              <div class="bar__top">
+                <span>Incident Handling</span><span class="muted">Strong</span>
+              </div>
+              <div class="bar__track"><div class="bar__fill" style="--w: 90%"></div></div>
+            </div>
+
+            <div class="bar">
+              <div class="bar__top">
+                <span>Troubleshooting</span><span class="muted">Strong</span>
+              </div>
+              <div class="bar__track"><div class="bar__fill" style="--w: 92%"></div></div>
+            </div>
+
+            <div class="bar">
+              <div class="bar__top">
+                <span>Documentation</span><span class="muted">Strong</span>
+              </div>
+              <div class="bar__track"><div class="bar__fill" style="--w: 85%"></div></div>
+            </div>
+
+            <div class="bar">
+              <div class="bar__top">
+                <span>Communication</span><span class="muted">Strong</span>
+              </div>
+              <div class="bar__track"><div class="bar__fill" style="--w: 88%"></div></div>
+            </div>
+          </div>
+
+          <div class="panel" data-reveal>
+            <h3>Software</h3>
+
+            <div class="bar">
+              <div class="bar__top">
+                <span>Frontend UI</span><span class="muted">Growing</span>
+              </div>
+              <div class="bar__track"><div class="bar__fill" style="--w: 80%"></div></div>
+            </div>
+
+            <div class="bar">
+              <div class="bar__top">
+                <span>JavaScript</span><span class="muted">Growing</span>
+              </div>
+              <div class="bar__track"><div class="bar__fill" style="--w: 78%"></div></div>
+            </div>
+
+            <div class="bar">
+              <div class="bar__top">
+                <span>Debugging</span><span class="muted">Strong</span>
+              </div>
+              <div class="bar__track"><div class="bar__fill" style="--w: 86%"></div></div>
+            </div>
+
+            <div class="bar">
+              <div class="bar__top">
+                <span>Project Building</span><span class="muted">Growing</span>
+              </div>
+              <div class="bar__track"><div class="bar__fill" style="--w: 82%"></div></div>
+            </div>
+
+            <div class="hint">
+              Tell me your exact tools (Citrix/Intune/ServiceNow/Azure etc.) and I’ll add them as premium skill chips.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT (EmailJS) -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="sec-head" data-reveal>
+          <h2>Contact</h2>
+          <p>Send me a message directly from this site (EmailJS).</p>
+        </div>
+
+        <div class="grid grid--2">
+          <div class="panel" data-reveal>
+            <h3>Quick links</h3>
+            <div class="contact-links">
+              <a class="btn btn--primary" href="mailto:rukshanm123@gmail.com">Email</a>
+              <a class="btn btn--ghost" target="_blank" rel="noopener noreferrer"
+                 href="https://www.linkedin.com/in/rukshan-de-silva99">LinkedIn</a>
+              <a class="btn btn--ghost" target="_blank" rel="noopener noreferrer"
+                 href="https://github.com/rukshanm123-art">GitHub</a>
+              <a class="btn btn--ghost" href="assets/Rukshan_De_Silva_CV.pdf" download>Download CV</a>
+            </div>
+
+            <div class="micro">
+              Tip: after you deploy on GitHub Pages, your contact form still works because EmailJS runs client-side.
+            </div>
+          </div>
+
+          <div class="panel" data-reveal>
+            <h3>Message me</h3>
+
+            <form class="form" id="contactForm">
+              <div class="field">
+                <label for="from_name">Your Name</label>
+                <input id="from_name" name="from_name" type="text" placeholder="John Smith" required />
+              </div>
+
+              <div class="field">
+                <label for="reply_to">Your Email</label>
+                <input id="reply_to" name="reply_to" type="email" placeholder="john@email.com" required />
+              </div>
+
+              <div class="field">
+                <label for="subject">Subject</label>
+                <input id="subject" name="subject" type="text" placeholder="Job opportunity / Question" required />
+              </div>
+
+              <div class="field">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Write your message..." required></textarea>
+              </div>
+
+              <button class="btn btn--primary" type="submit" id="sendBtn">
+                Send Message
+              </button>
+
+              <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+
+              <div class="micro">
+                Setup required: add your EmailJS keys inside <b>script.js</b>.
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <footer class="footer">
+          <div>© <span id="year"></span> Rukshan De Silva</div>
+          <div class="footer__right">
+            <span class="dot"></span> Built with HTML/CSS/JS
+          </div>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <!-- Project Modal -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal__backdrop" id="modalClose" aria-hidden="true"></div>
+    <div class="modal__panel" role="dialog" aria-modal="true" aria-label="Project details">
+      <div class="modal__top">
+        <div>
+          <div class="modal__title" id="mTitle">Project</div>
+          <div class="modal__sub" id="mStack">Stack</div>
+        </div>
+        <button class="icon-btn" id="modalX" type="button" aria-label="Close modal">✕</button>
+      </div>
+      <div class="modal__body">
+        <p id="mDesc" class="modal__desc"></p>
+        <div class="modal__links" id="mLinks"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- EmailJS (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
